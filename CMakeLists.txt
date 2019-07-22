@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.0.0)
 
 project(FreeImage)
 
-#set(FI_SRCS_File fipMakefile.srcs)
-set(FI_SRCS_File Makefile.srcs CACHE FILEPATH ".srcs file from freeimage source code")
-message(STATUS "Generate Project From ${FI_SRCS_File}")
+#set(FI_SRCS_FILE fipMakefile.srcs)
+set(FI_SRCS_FILE Makefile.srcs CACHE FILEPATH ".srcs file from freeimage source code")
+message(STATUS "Generate Project From ${FI_SRCS_FILE}")
 
 # read file content
-file(STRINGS ${FI_SRCS_File} SRCS_File)
+file(STRINGS ${FI_SRCS_FILE} SRCS_File)
 
 # find VER_MAJOR
 string(REGEX MATCH "VER_MAJOR = ([0-9.]*);" VER_MAJOR_STR "${SRCS_File}")
