@@ -45,20 +45,20 @@ string(REGEX REPLACE " ?-I" ";" INCLUDE ${INCLUDE})
 
 # source_group
 foreach(FILE ${SRCS} ${INCLS})
-  get_filename_component(PARENT_DIR "${FILE}" PATH)
+    get_filename_component(PARENT_DIR "${FILE}" PATH)
 
-  # ignore .
-  string(REGEX REPLACE "\\.[/\\\\]" "" GROUP "${PARENT_DIR}")
-  string(REPLACE "/" "\\" GROUP "${GROUP}")
+    # ignore .
+    string(REGEX REPLACE "\\.[/\\\\]" "" GROUP "${PARENT_DIR}")
+    string(REPLACE "/" "\\" GROUP "${GROUP}")
 
-  # group into "Source Files" and "Header Files"
-  if ("${FILE}" MATCHES ".*\\.cp{0,2}")
-    set(GROUP "Source Files\\${GROUP}")
-  elseif("${FILE}" MATCHES ".*\\.h")
-    set(GROUP "Header Files\\${GROUP}")
-  endif()
+    # group into "Source Files" and "Header Files"
+    if ("${FILE}" MATCHES ".*\\.cp{0,2}")
+        set(GROUP "Source Files\\${GROUP}")
+    elseif("${FILE}" MATCHES ".*\\.h")
+        set(GROUP "Header Files\\${GROUP}")
+    endif()
 
-  source_group("${GROUP}" FILES "${FILE}")
+    source_group("${GROUP}" FILES "${FILE}")
 endforeach()
 
 # add library
