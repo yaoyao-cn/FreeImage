@@ -66,6 +66,9 @@ add_library(FreeImage ${SRCS} ${INCLS})
 
 # config library
 target_compile_definitions(FreeImage PRIVATE LIBRAW_NODLL OPJ_STATIC DISABLE_PERF_MEASUREMENT)
+if(NOT MSVC)
+    target_compile_definitions(FreeImage PRIVATE __ANSI__)
+endif()
 
 if(BUILD_SHARED_LIBS)
     target_compile_definitions(FreeImage PRIVATE FIP_EXPORTS FREEIMAGE_EXPORTS)
