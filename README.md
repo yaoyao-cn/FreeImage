@@ -27,3 +27,6 @@ cmake .. -DFI_SRCS_FILE=../Makefile.srcs -DBUILD_SHARED_LIBS:BOOL=ON
 cmake .. -DFI_SRCS_FILE=../Makefile.srcs -DBUILD_SHARED_LIBS:BOOL=ON
 
 ```
+# Notes
+- This repository is a fork of [FreeImage Source](http://freeimage.sourceforge.net/)
+- Alternatively you can download the binary distribution from [here](http://freeimage.sourceforge.net/download.html)
