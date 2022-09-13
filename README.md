@@ -24,7 +24,7 @@ cmake .. -DFI_SRCS_FILE=../fipMakefile.srcs
 cmake .. -DFI_SRCS_FILE=../Makefile.srcs -DBUILD_SHARED_LIBS:BOOL=ON
 
 # build with fip(shared lib)
-cmake .. -DFI_SRCS_FILE=../Makefile.srcs -DBUILD_SHARED_LIBS:BOOL=ON
+cmake .. -DFI_SRCS_FILE=../fipMakefile.srcs -DBUILD_SHARED_LIBS:BOOL=ON
 
 ```
 # Notes
